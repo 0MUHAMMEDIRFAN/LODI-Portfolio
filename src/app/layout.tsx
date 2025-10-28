@@ -1,10 +1,10 @@
+
+
+"use client";
 import type { Metadata } from "next";
 import "./globals.css";
-
-export const metadata: Metadata = {
-  title: "LODI - Smart Logistics Platform",
-  description: "Connecting return trucks with loads. Book trucks on-demand like Uber for your logistics needs.",
-};
+import { AnimatePresence, motion } from "framer-motion";
+import Topbar from "@/components/Topbar";
 
 export default function RootLayout({
   children,
@@ -14,7 +14,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        {children}
+        {/* Topbar Component */}
+        <Topbar />
+        <AnimatePresence mode="wait">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4 }}
+            style={{ minHeight: "100vh" }}
+          >
+            {children}
+          </motion.div>
+        </AnimatePresence>
       </body>
     </html>
   );
