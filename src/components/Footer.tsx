@@ -79,8 +79,8 @@ export default function Footer() {
             <h3 className="text-xl font-bold mb-2">Stay Updated</h3>
             <p className="text-gray-400 mb-4">Get notified when our mobile app launches and receive updates on new features.</p>
             <div className="flex gap-2">
-              <input 
-                type="email" 
+              <input
+                type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:border-white/40 transition-colors"
               />

@@ -1,3 +1,4 @@
+import { FaAppStore, FaGooglePlay } from "react-icons/fa";
 
 export default function AppDownload() {
   return (
@@ -71,14 +72,14 @@ export default function AppDownload() {
             {/* App Store Badges - Placeholder */}
             <div className="flex flex-wrap gap-3 sm:gap-4">
               <div className="px-5 py-2.5 sm:px-6 sm:py-3 bg-white text-black rounded-xl font-semibold flex items-center gap-2 sm:gap-3 cursor-not-allowed opacity-50">
-                <span className="text-xl sm:text-2xl">📱</span>
+                <FaAppStore size={24} />
                 <div className="text-left">
                   <div className="text-xs">Download on the</div>
                   <div className="text-sm font-bold">App Store</div>
                 </div>
               </div>
               <div className="px-5 py-2.5 sm:px-6 sm:py-3 bg-white text-black rounded-xl font-semibold flex items-center gap-2 sm:gap-3 cursor-not-allowed opacity-50">
-                <span className="text-xl sm:text-2xl">🤖</span>
+                <FaGooglePlay size={24} />
                 <div className="text-left">
                   <div className="text-xs">Get it on</div>
                   <div className="text-sm font-bold">Google Play</div>

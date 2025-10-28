@@ -15,7 +15,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased">
         {/* Topbar Component */}
-        <Topbar />
+        {/* <Topbar /> */}
         <AnimatePresence mode="wait">
           <motion.div
             initial={{ opacity: 0 }}
