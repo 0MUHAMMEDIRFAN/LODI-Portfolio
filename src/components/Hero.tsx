@@ -1,3 +1,5 @@
+import { SITE_NAME } from '@/constants';
+
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-gray-100 to-white overflow-hidden">
@@ -13,7 +15,7 @@ export default function Hero() {
         {/* Logo Placeholder */}
         <div className="mb-6 sm:mb-8 flex justify-center">
           <div className="w-20 h-20 sm:w-24 sm:h-24 bg-black/80 rounded-2xl flex items-center justify-center shadow-2xl hover:shadow-3xl transition-shadow duration-300 border border-white/20 backdrop-blur-md">
-            <span className="text-white text-3xl sm:text-4xl font-bold">LODI</span>
+            <span className="text-white text-3xl sm:text-4xl font-bold">{SITE_NAME}</span>
           </div>
         </div>
 

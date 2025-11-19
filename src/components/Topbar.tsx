@@ -1,8 +1,8 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
-
 import { useState } from "react";
+import { SITE_NAME } from "@/constants";
 
 export default function Topbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,7 +14,7 @@ export default function Topbar() {
       className="w-full flex justify-center items-center py-3 mb-6"
     >
       <div className="backdrop-blur-lg bg-white/5 border border-white/10 rounded-xl shadow-lg px-4 sm:px-8 py-2 flex items-center w-full max-w-4xl mx-auto">
-        <span className="font-bold text-xl sm:text-2xl tracking-wide mr-4 sm:mr-8 text-blue-400">LODI</span>
+        <span className="font-bold text-xl sm:text-2xl tracking-wide mr-4 sm:mr-8 text-blue-400">{SITE_NAME}</span>
         {/* Desktop Menu */}
         <ul className="hidden sm:flex gap-4 sm:gap-6 text-base sm:text-lg font-medium flex-1 justify-end">
           <li>

@@ -1,3 +1,5 @@
+import { SITE_NAME, SOCIALS } from '@/constants';
+
 export default function Footer() {
   return (
     <footer className="bg-black text-white">
@@ -8,28 +10,28 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
-                <span className="text-black text-xl font-bold">LODI</span>
+                <span className="text-black text-xl font-bold">{SITE_NAME}</span>
               </div>
-              <span className="text-2xl font-bold">LODI</span>
+              <span className="text-2xl font-bold">{SITE_NAME}</span>
             </div>
             <p className="text-gray-400 mb-6">
               Smart logistics platform connecting return trucks with loads. Reducing empty miles, maximizing profits.
             </p>
             {/* Social Links */}
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+              <a href={SOCIALS.twitter} className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
                 <span className="sr-only">Twitter</span>
                 𝕏
               </a>
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+              <a href={SOCIALS.linkedin} className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
                 <span className="sr-only">LinkedIn</span>
                 in
               </a>
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+              <a href={SOCIALS.facebook} className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
                 <span className="sr-only">Facebook</span>
                 f
               </a>
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+              <a href={SOCIALS.instagram} className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
                 <span className="sr-only">Instagram</span>
                 📷
               </a>
@@ -97,7 +99,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm" suppressHydrationWarning>
-              © {new Date().getFullYear()} LODI. All rights reserved.
+              © {new Date().getFullYear()} {SITE_NAME}. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy</a>

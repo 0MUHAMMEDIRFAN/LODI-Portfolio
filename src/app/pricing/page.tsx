@@ -1,3 +1,52 @@
+import { Metadata } from 'next';
+import { SITE_URL, SITE_NAME, SOCIALS } from '@/constants';
+
+export const metadata: Metadata = {
+  title: `${SITE_NAME} Pricing - Transparent Plans for Business & Drivers`,
+  description: `Discover ${SITE_NAME}'s transparent pricing plans. Business plan at $99/mo with unlimited bookings and analytics. Drivers join free with instant payments and load marketplace access.`,
+  keywords: [`${SITE_NAME} pricing`, 'logistics pricing', 'business plan', 'driver plan', 'transparent pricing', 'logistics costs', 'freight pricing'],
+  authors: [{ name: `${SITE_NAME} Logistics` }],
+  creator: `${SITE_NAME} Logistics`,
+  publisher: `${SITE_NAME} Logistics Platform`,
+  alternates: {
+    canonical: `${SITE_URL}/pricing`,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: `${SITE_URL}/pricing`,
+    title: `${SITE_NAME} Pricing - Transparent Plans for Business & Drivers`,
+    description: `Discover ${SITE_NAME}'s transparent pricing plans. Business plan at $99/mo, drivers join free with instant payments.`,
+    siteName: SITE_NAME,
+    images: [
+      {
+        url: `${SITE_URL}/og-pricing.jpg`,
+        width: 1200,
+        height: 630,
+        alt: `${SITE_NAME} Pricing Plans`,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${SITE_NAME} Pricing - Transparent Plans for Business & Drivers`,
+    description: `Discover ${SITE_NAME}'s transparent pricing plans. Business plan at $99/mo, drivers join free.`,
+    creator: SOCIALS.twitter.replace('https://twitter.com/', '@'),
+    images: [`${SITE_URL}/og-pricing.jpg`],
+  },
+};
+
 export default function Pricing() {
   return (
     <section className="min-h-screen py-16 px-4 sm:px-8 lg:px-24 bg-white text-black">

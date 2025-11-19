@@ -1,10 +1,59 @@
+import { Metadata } from 'next';
+import { SITE_URL, SITE_NAME, SOCIALS, CONTACT_EMAIL } from '@/constants';
+
+export const metadata: Metadata = {
+  title: `Contact ${SITE_NAME} - Get in Touch with Our Logistics Team`,
+  description: `Have questions about ${SITE_NAME} logistics platform? Contact us for partnerships, support, or inquiries. Reach our team at ${CONTACT_EMAIL} or +1 234 567 890. We're here to help.`,
+  keywords: [`contact ${SITE_NAME}`, 'logistics support', 'customer service', 'business inquiries', 'partnership opportunities', 'contact logistics company'],
+  authors: [{ name: `${SITE_NAME} Logistics` }],
+  creator: `${SITE_NAME} Logistics`,
+  publisher: `${SITE_NAME} Logistics Platform`,
+  alternates: {
+    canonical: `${SITE_URL}/contact`,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: `${SITE_URL}/contact`,
+    title: `Contact ${SITE_NAME} - Get in Touch with Our Logistics Team`,
+    description: `Have questions about ${SITE_NAME} logistics platform? Contact us for partnerships, support, or inquiries.`,
+    siteName: SITE_NAME,
+    images: [
+      {
+        url: `${SITE_URL}/og-contact.jpg`,
+        width: 1200,
+        height: 630,
+        alt: `Contact ${SITE_NAME} Logistics`,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `Contact ${SITE_NAME} - Get in Touch with Our Logistics Team`,
+    description: `Have questions about ${SITE_NAME} logistics platform? Contact us for partnerships, support, or inquiries.`,
+    creator: SOCIALS.twitter.replace('https://twitter.com/', '@'),
+    images: [`${SITE_URL}/og-contact.jpg`],
+  },
+};
+
 export default function Contact() {
   return (
     <section className="min-h-screen py-16 px-4 sm:px-8 lg:px-24 bg-white text-black">
       <div className="max-w-2xl mx-auto text-center">
         <h1 className="text-4xl sm:text-5xl font-bold mb-6">Contact Us</h1>
         <p className="text-lg sm:text-xl text-gray-600 mb-8">
-          Have questions or want to partner with LODI? Reach out to us below.
+          Have questions or want to partner with {SITE_NAME}? Reach out to us below.
         </p>
         <form className="bg-gray-50 rounded-xl p-6 shadow-lg text-left">
           <div className="mb-4">
@@ -23,7 +72,7 @@ export default function Contact() {
         </form>
         <div className="mt-8 text-left">
           <h2 className="text-xl font-semibold mb-2">Company Info</h2>
-          <p className="text-gray-700">Email: info@lodi.com</p>
+          <p className="text-gray-700">Email: {CONTACT_EMAIL}</p>
           <p className="text-gray-700">Phone: +1 234 567 890</p>
           <p className="text-gray-700">Address: 123 LODI Street, Logistics City</p>
         </div>
