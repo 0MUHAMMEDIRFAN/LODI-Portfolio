@@ -65,32 +65,6 @@ export default function About() {
             <p className="text-gray-700 mb-4">Empower drivers, optimize routes, and help businesses save money while reducing environmental impact. We believe in a future where every truck runs full and every shipment is tracked in real time.</p>
           </div>
         </div>
-        <div className="mt-12">
-          <h2 className="text-2xl font-semibold mb-4">Meet the Team</h2>
-          <div className="flex flex-wrap justify-center gap-6">
-            <div className="bg-black text-white rounded-xl p-6 w-48 shadow-lg">
-              <div className="w-16 h-16 bg-white rounded-full mx-auto mb-3 flex items-center justify-center">
-                <span className="text-black text-2xl font-bold">A</span>
-              </div>
-              <div className="font-bold">Alex</div>
-              <div className="text-sm text-gray-300">CEO</div>
-            </div>
-            <div className="bg-black text-white rounded-xl p-6 w-48 shadow-lg">
-              <div className="w-16 h-16 bg-white rounded-full mx-auto mb-3 flex items-center justify-center">
-                <span className="text-black text-2xl font-bold">S</span>
-              </div>
-              <div className="font-bold">Sara</div>
-              <div className="text-sm text-gray-300">CTO</div>
-            </div>
-            <div className="bg-black text-white rounded-xl p-6 w-48 shadow-lg">
-              <div className="w-16 h-16 bg-white rounded-full mx-auto mb-3 flex items-center justify-center">
-                <span className="text-black text-2xl font-bold">M</span>
-              </div>
-              <div className="font-bold">Mike</div>
-              <div className="text-sm text-gray-300">Lead Engineer</div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
