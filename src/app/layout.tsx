@@ -67,7 +67,7 @@ export default function RootLayout({
         </noscript>
         {/* End Google Tag Manager (noscript) */}
         {/* Topbar Component */}
-        {/* <Topbar /> */}
+        <Topbar />
         <AnimatePresence mode="wait">
           <motion.div
             initial={{ opacity: 0 }}
