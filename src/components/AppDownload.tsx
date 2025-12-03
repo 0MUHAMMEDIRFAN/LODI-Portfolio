@@ -1,3 +1,5 @@
+import { SITE_NAME } from "@/constants";
+import { IMAGE_PATHS } from "@/constants/files";
 import { FaAppStore, FaGooglePlay } from "react-icons/fa";
 
 export default function AppDownload() {
@@ -104,7 +106,7 @@ export default function AppDownload() {
                   {/* App Preview */}
                   <div className="mt-8 sm:mt-12 text-center w-full">
                     <div className="w-16 h-16 sm:w-20 sm:h-20 bg-black rounded-2xl flex items-center justify-center mb-4 sm:mb-6 mx-auto">
-                      <span className="text-white text-lg sm:text-2xl font-bold">LODI</span>
+                      <span className="text-white text-lg sm:text-2xl font-bold"><img src={IMAGE_PATHS.LOGO_SMALL} className="" alt={SITE_NAME} /></span>
                     </div>
                     <h3 className="text-lg sm:text-2xl font-bold mb-1 sm:mb-2">LODI App</h3>
                     <p className="text-gray-600 text-xs sm:text-sm mb-4 sm:mb-8">Your logistics companion</p>

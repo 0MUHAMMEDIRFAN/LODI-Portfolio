@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { SITE_URL, SITE_NAME, SOCIALS, CONTACT_EMAIL } from '@/constants';
+import { SITE_URL, SITE_NAME, SOCIALS, CONTACT_EMAIL, CONTACT_PHONE, CONTACT_ADDRESS } from '@/constants';
 
 export const metadata: Metadata = {
   title: `Contact ${SITE_NAME} - Get in Touch with Our Logistics Team`,
@@ -73,8 +73,8 @@ export default function Contact() {
         <div className="mt-8 text-left">
           <h2 className="text-xl font-semibold mb-2">Company Info</h2>
           <p className="text-gray-700">Email: {CONTACT_EMAIL}</p>
-          <p className="text-gray-700">Phone: +1 234 567 890</p>
-          <p className="text-gray-700">Address: 123 LODI Street, Logistics City</p>
+          <p className="text-gray-700">Phone: {CONTACT_PHONE}</p>
+          <p className="text-gray-700">Address: {CONTACT_ADDRESS}</p>
         </div>
       </div>
     </section>

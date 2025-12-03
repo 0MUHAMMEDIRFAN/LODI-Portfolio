@@ -1,4 +1,5 @@
 import { SITE_NAME } from '@/constants';
+import { IMAGE_PATHS } from '@/constants/files';
 
 export default function Hero() {
   return (
@@ -15,7 +16,7 @@ export default function Hero() {
         {/* Logo Placeholder */}
         <div className="mb-6 sm:mb-8 flex justify-center">
           <div className="w-20 h-20 sm:w-24 sm:h-24 bg-black/80 rounded-2xl flex items-center justify-center shadow-2xl hover:shadow-3xl transition-shadow duration-300 border border-white/20 backdrop-blur-md">
-            <span className="text-white text-3xl sm:text-4xl font-bold">{SITE_NAME}</span>
+            <span className="text-white text-3xl sm:text-4xl font-bold"><img src={IMAGE_PATHS.LOGO_SMALL} className="" alt={SITE_NAME} /></span>
           </div>
         </div>
 

@@ -1,4 +1,5 @@
 "use client";
+import { DEFAULT_OG_IMAGE } from "@/constants";
 import Head from "next/head";
 
 interface SEOHeadProps {
@@ -19,14 +20,14 @@ export default function SEOHead({
   description = "LODI is revolutionizing logistics by connecting empty return trucks with loads. Book on-demand pickups, reduce empty miles, and maximize profits. Join 10,000+ drivers and 500+ corporate partners.",
   keywords = "logistics platform, return trucks, load matching, on-demand logistics, truck booking, freight delivery, cargo transport, smart logistics, LODI, logistics app, truck drivers, supply chain, logistics network",
   canonical,
-  ogImage = "/og-image.jpg",
+  ogImage = DEFAULT_OG_IMAGE,
   ogType = "website",
   twitterCard = "summary_large_image",
   author = "LODI Logistics",
   publisher = "LODI Logistics Platform",
   robots = "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
 }: SEOHeadProps) {
-  const siteUrl = typeof window !== "undefined" ? window.location.origin : "https://lodi-logistics.com";
+  const siteUrl = typeof window !== "undefined" ? window.location.origin : "https://lodi.co.in";
   const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl;
 
   return (

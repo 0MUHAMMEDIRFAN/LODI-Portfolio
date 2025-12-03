@@ -1,4 +1,7 @@
 import { SITE_NAME, SOCIALS } from '@/constants';
+import { IMAGE_PATHS } from '@/constants/files';
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 export default function Footer() {
   return (
@@ -10,7 +13,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
-                <span className="text-black text-xl font-bold">{SITE_NAME}</span>
+                <span className="text-black text-xl font-bold"><img src={IMAGE_PATHS.LOGO_SMALL} className="" alt={SITE_NAME} /></span>
               </div>
               <span className="text-2xl font-bold">{SITE_NAME}</span>
             </div>
@@ -21,19 +24,19 @@ export default function Footer() {
             <div className="flex gap-4">
               <a href={SOCIALS.twitter} className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
                 <span className="sr-only">Twitter</span>
-                𝕏
+                <FaXTwitter />
               </a>
               <a href={SOCIALS.linkedin} className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
                 <span className="sr-only">LinkedIn</span>
-                in
+                <FaLinkedin />
               </a>
               <a href={SOCIALS.facebook} className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
                 <span className="sr-only">Facebook</span>
-                f
+                <FaFacebook />
               </a>
               <a href={SOCIALS.instagram} className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
                 <span className="sr-only">Instagram</span>
-                📷
+                <FaInstagram />
               </a>
             </div>
           </div>
